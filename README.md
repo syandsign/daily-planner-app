@@ -12,7 +12,10 @@ This is a project for the daily planner app created by Syandsign Studio. The pur
   npm run android #for running using android
   ```
 
-  # Files needed
+# Files needed
 - [ ] favicon.png - 48x48 px
 - [ ] icon.png - 192x192 px
 - [ ] spash.png - 1242x1242 px
+
+# Docs and resources
+- Expo.io docs: https://docs.expo.io/
