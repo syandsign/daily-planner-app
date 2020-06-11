@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Daily Planner App",
-    "slug": "Daily Planner App",
+    "slug": "daily-planner-app",
     "platforms": [
       "ios",
       "android",
