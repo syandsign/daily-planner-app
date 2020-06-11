@@ -12,7 +12,7 @@ export default function HomeScreen() {
         <View style={styles.getStartedContainer}>
           <TouchableOpacity
             onPress={() => alert('Hello, world!')}>
-            <Text style={{ fontSize: 20 }}>Hello wrold</Text>
+            <Text style={{ fontSize: 20 }}>Hello wrold!</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
