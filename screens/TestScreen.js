@@ -3,6 +3,9 @@ import * as React from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'reactstrap'
+
 import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
@@ -14,6 +17,7 @@ export default function HomeScreen() {
             onPress={() => alert('Hello, world!')}>
             <Text style={{ fontSize: 20 }}>Hello wrold!</Text>
           </TouchableOpacity>
+          <Button color="danger">Danger!</Button>
         </View>
       </ScrollView>
     </View>
