@@ -4,7 +4,9 @@ import * as React from 'react';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import TestScreen from '../screens/TestScreen';
+import Schedule from '../screens/Schedule';
+import Pomodoro from '../screens/Pomodoro';
+import Profile from '../screens/Profile';
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -21,8 +23,32 @@ export default function BottomTabNavigator({ navigation, route }) {
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
+          title: 'Home',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-home" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Pomodoro"
+        component={Pomodoro}
+        options={{
+          title: 'Pomodoro',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-time" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-person" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Schedule"
+        component={Schedule}
+        options={{
+          title: 'Schedule',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-calendar" />,
         }}
       />
       <BottomTab.Screen
@@ -30,14 +56,6 @@ export default function BottomTabNavigator({ navigation, route }) {
         component={LinksScreen}
         options={{
           title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
-        }}
-      />
-      <BottomTab.Screen
-        name="ASd"
-        component={TestScreen}
-        options={{
-          title: 'Test',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
@@ -49,9 +67,15 @@ function getHeaderTitle(route) {
   const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
 
   switch (routeName) {
-    case 'Home':
-      return 'How to get started';
     case 'Links':
       return 'Links to learn more';
+    case 'Home':
+      return 'Daily Planner App';
+    case 'Pomodoro':
+      return 'Pomodoro Timer';
+    case 'Schedule':
+      return 'Schedule';
+    case 'Profile':
+      return 'Profile';
   }
 }

@@ -1,32 +1,63 @@
 import * as WebBrowser from 'expo-web-browser';
 import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap'
 
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
+export default function Pomodoro() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <View style={styles.getStartedContainer}>
-          <TouchableOpacity
-            onPress={() => alert('Hello, world!')}>
-            <Text style={{ fontSize: 20 }}>Hello wrold!</Text>
-          </TouchableOpacity>
-          <Button color="danger">Danger!</Button>
+          <Text>Pomodoro | Short Break | Long Break</Text>
+          <Text style={{ fontSize: 90, fontWeight: "bold" }}>25:00</Text>
+          <Button
+            title="START"
+            color="#000000"
+          />
         </View>
       </ScrollView>
     </View>
   );
 }
 
-HomeScreen.navigationOptions = {
+Pomodoro.navigationOptions = {
   header: null,
 };
+
+function DevelopmentModeNotice() {
+  if (__DEV__) {
+    const learnMoreButton = (
+      <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
+        Learn more
+      </Text>
+    );
+
+    return (
+      <Text style={styles.developmentModeText}>
+        Development mode is enabled: your app will be slower but you can use useful development
+        tools. {learnMoreButton}
+      </Text>
+    );
+  } else {
+    return (
+      <Text style={styles.developmentModeText}>
+        You are not in development mode: your app will run at full speed.
+      </Text>
+    );
+  }
+}
+
+function handleLearnMorePress() {
+  WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/workflow/development-mode/');
+}
+
+function handleHelpPress() {
+  WebBrowser.openBrowserAsync(
+    'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
+  );
+}
 
 const styles = StyleSheet.create({
   container: {

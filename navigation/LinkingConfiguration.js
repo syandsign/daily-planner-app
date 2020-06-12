@@ -7,6 +7,9 @@ export default {
       path: 'root',
       screens: {
         Home: 'home',
+        Pomodoro: 'pomodoro',
+        Profile: 'profile',
+        Schedule: 'schedule',
         Links: 'links',
         Test: 'test',
       },
