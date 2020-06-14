@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 import { MonoText } from '../components/StyledText';
 
-export default function Schedule() {
+export default function Task() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
@@ -20,7 +20,7 @@ export default function Schedule() {
   );
 }
 
-Schedule.navigationOptions = {
+Task.navigationOptions = {
   header: null,
 };
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 50,
   },
-  ScheduleFilename: {
+  TaskFilename: {
     marginVertical: 7,
   },
   codeHighlightText: {

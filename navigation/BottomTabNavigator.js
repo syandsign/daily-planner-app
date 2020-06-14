@@ -4,7 +4,7 @@ import * as React from 'react';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
-import Schedule from '../screens/Schedule';
+import Task from '../screens/Task';
 import Pomodoro from '../screens/Pomodoro';
 import Profile from '../screens/Profile';
 
@@ -44,10 +44,10 @@ export default function BottomTabNavigator({ navigation, route }) {
         }}
       />
       <BottomTab.Screen
-        name="Schedule"
-        component={Schedule}
+        name="Task"
+        component={Task}
         options={{
-          title: 'Schedule',
+          title: 'Task',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="ios-calendar" />,
         }}
       />
@@ -73,8 +73,8 @@ function getHeaderTitle(route) {
       return 'Daily Planner App';
     case 'Pomodoro':
       return 'Pomodoro Timer';
-    case 'Schedule':
-      return 'Schedule';
+    case 'Task':
+      return 'Task';
     case 'Profile':
       return 'Profile';
   }

@@ -9,7 +9,7 @@ export default {
         Home: 'home',
         Pomodoro: 'pomodoro',
         Profile: 'profile',
-        Schedule: 'schedule',
+        Task: 'task',
         Links: 'links',
         Test: 'test',
       },

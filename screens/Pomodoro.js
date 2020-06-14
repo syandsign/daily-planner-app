@@ -11,7 +11,7 @@ export default function Pomodoro() {
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <View style={styles.getStartedContainer}>
           <Text>Pomodoro | Short Break | Long Break</Text>
-          <Text style={{ fontSize: 90, fontWeight: "bold" }}>25:00</Text>
+          <Text style={{ fontSize: 70, fontWeight: "bold" }}>25:00</Text>
           <Button
             title="START"
             color="#000000"
